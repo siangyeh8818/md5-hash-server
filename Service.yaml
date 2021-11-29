@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: md5-hash-server
+  labels:
+    app.kubernetes.io/instance: md5-hash-server
+    app.kubernetes.io/name: md5-hash-server
+spec:
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: campaign
+    app.kubernetes.io/name: campaign
+  type: ClusterIP

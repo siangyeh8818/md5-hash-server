@@ -1,2 +1,1 @@
-# md5-hash-server
-md5-hash-server
+# gin.project.template
